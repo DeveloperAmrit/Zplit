@@ -1,5 +1,6 @@
 'use client';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 export default function Footer() {
   return (
@@ -19,7 +20,7 @@ export default function Footer() {
             </p>
             <div className="flex flex-col gap-3">
               <a href="https://aossie.org" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                <img src="https://aossie.org/logo1.png" alt="AOSSIE Logo" className="h-8 w-auto" />
+                <Image src="https://aossie.org/logo1.png" alt="AOSSIE Logo" width={32} height={32} className="h-8 w-auto" />
                 <span className="text-lg font-bold text-emerald-900 dark:text-emerald-400">AOSSIE</span>
               </a>
               <p className="text-xs text-zinc-500 dark:text-zinc-500">
