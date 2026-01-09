@@ -14,9 +14,18 @@ export default function Footer() {
         >
           <div>
             <div className="mb-4 text-2xl font-bold text-emerald-900 dark:text-emerald-400">Zplit</div>
-            <p className="text-sm text-zinc-600 dark:text-zinc-400">
+            <p className="mb-6 text-sm text-zinc-600 dark:text-zinc-400">
               Decentralized expense sharing for the privacy-conscious.
             </p>
+            <div className="flex flex-col gap-3">
+              <a href="https://aossie.org" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                <img src="https://aossie.org/logo1.png" alt="AOSSIE Logo" className="h-8 w-auto" />
+                <span className="text-lg font-bold text-emerald-900 dark:text-emerald-400">AOSSIE</span>
+              </a>
+              <p className="text-xs text-zinc-500 dark:text-zinc-500">
+                Australian not-for-profit umbrella organization for open-source projects.
+              </p>
+            </div>
           </div>
           <div>
             <div className="mb-4 text-sm font-semibold text-zinc-900 dark:text-white">Product</div>
@@ -24,25 +33,24 @@ export default function Footer() {
               <li><a href="#features" className="hover:text-emerald-600 dark:hover:text-emerald-400">Features</a></li>
               <li><a href="#tech" className="hover:text-emerald-600 dark:hover:text-emerald-400">Technology</a></li>
               <li><a href="#gallery" className="hover:text-emerald-600 dark:hover:text-emerald-400">Gallery</a></li>
-              <li><a href="https://github.com" className="hover:text-emerald-600 dark:hover:text-emerald-400">Roadmap</a></li>
+              <li><a href="https://github.com/StabilityNexus/Zplit" className="hover:text-emerald-600 dark:hover:text-emerald-400">Roadmap</a></li>
             </ul>
           </div>
           <div>
             <div className="mb-4 text-sm font-semibold text-zinc-900 dark:text-white">Developers</div>
             <ul className="space-y-2 text-sm text-zinc-600 dark:text-zinc-400">
-              <li><a href="https://github.com" className="hover:text-emerald-600 dark:hover:text-emerald-400">GitHub</a></li>
-              <li><a href="https://github.com" className="hover:text-emerald-600 dark:hover:text-emerald-400">Documentation</a></li>
-              <li><a href="https://github.com" className="hover:text-emerald-600 dark:hover:text-emerald-400">API Reference</a></li>
-              <li><a href="https://github.com" className="hover:text-emerald-600 dark:hover:text-emerald-400">Contributing</a></li>
+              <li><a href="https://github.com/StabilityNexus/Zplit" className="hover:text-emerald-600 dark:hover:text-emerald-400">GitHub</a></li>
+              <li><a href="https://github.com/StabilityNexus/Zplit" className="hover:text-emerald-600 dark:hover:text-emerald-400">Documentation</a></li>
+              <li><a href="https://github.com/StabilityNexus/Zplit" className="hover:text-emerald-600 dark:hover:text-emerald-400">API Reference</a></li>
+              <li><a href="https://github.com/StabilityNexus/Zplit" className="hover:text-emerald-600 dark:hover:text-emerald-400">Contributing</a></li>
             </ul>
           </div>
           <div>
             <div className="mb-4 text-sm font-semibold text-zinc-900 dark:text-white">Community</div>
             <ul className="space-y-2 text-sm text-zinc-600 dark:text-zinc-400">
-              <li><a href="https://twitter.com" className="hover:text-emerald-600 dark:hover:text-emerald-400">Twitter</a></li>
-              <li><a href="https://discord.com" className="hover:text-emerald-600 dark:hover:text-emerald-400">Discord</a></li>
-              <li><a href="https://reddit.com" className="hover:text-emerald-600 dark:hover:text-emerald-400">Reddit</a></li>
-              <li><a href="mailto:hello@zplit.app" className="hover:text-emerald-600 dark:hover:text-emerald-400">Contact</a></li>
+              <li><a href="https://twitter.com/aossie_org" className="hover:text-emerald-600 dark:hover:text-emerald-400">Twitter</a></li>
+              <li><a href="https://discord.gg/6ExGjTBe" className="hover:text-emerald-600 dark:hover:text-emerald-400">Discord</a></li>
+              <li><a href="mailto:aossie.oss@gmail.com" className="hover:text-emerald-600 dark:hover:text-emerald-400">Contact</a></li>
             </ul>
           </div>
         </motion.div>

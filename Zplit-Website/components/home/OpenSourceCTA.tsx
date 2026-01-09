@@ -43,7 +43,7 @@ export default function OpenSourceCTA() {
           <motion.a
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            href="https://github.com"
+            href="https://github.com/StabilityNexus/Zplit"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 rounded-full bg-white px-6 py-3 font-semibold text-emerald-900 shadow-lg transition-all hover:shadow-xl"
@@ -56,7 +56,7 @@ export default function OpenSourceCTA() {
           <motion.a
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            href="https://github.com"
+            href="https://github.com/StabilityNexus/Zplit"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 rounded-full border-2 border-white px-6 py-3 font-semibold text-white transition-all hover:bg-white hover:text-emerald-900"
@@ -77,8 +77,8 @@ export default function OpenSourceCTA() {
                whileInView={{ opacity: 1, y: 0 }}
                viewport={{ once: true }}
                transition={{ delay: 0.6 + (index * 0.1) }}
-               whileHover={{ y: -5 }}
-               className="rounded-2xl border border-emerald-400/20 bg-emerald-800/20 p-6 backdrop-blur"
+               whileHover={{ y: -5, scale: 1.05 }}
+               className="rounded-2xl border border-emerald-400/20 bg-emerald-800/20 p-6 backdrop-blur transition-colors hover:border-emerald-400/40 hover:bg-emerald-800/40"
              >
                 <div className="mb-2 text-3xl font-bold text-white">{item.title}</div>
                 <div className="text-sm text-emerald-200">{item.desc}</div>

@@ -60,12 +60,23 @@ export default function Navbar() {
     }
   }, [mobileMenuOpen]);
 
+
+  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    setMobileMenuOpen(false);
+    const element = document.querySelector(href);
+    if (element) {
+      const y = element.getBoundingClientRect().top + window.scrollY - 80;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+  };
+
   return (
     <motion.nav 
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className={`fixed top-0 z-50 w-full transition-all duration-300 ${scrolled
+      className={`fixed top-0 z-50 w-full transition-all duration-300 ${scrolled || mobileMenuOpen
       ? 'border-b border-emerald-100/50 bg-white/90 py-3 shadow-lg shadow-emerald-500/5 backdrop-blur-xl dark:border-emerald-900/30 dark:bg-black/90 dark:shadow-emerald-500/10'
       : 'border-b border-transparent bg-white/60 py-4 backdrop-blur-md dark:bg-black/60'
       }`}
@@ -132,7 +143,7 @@ export default function Navbar() {
           </motion.button>
           
           <a
-            href="https://github.com"
+            href="https://github.com/StabilityNexus/Zplit"
             target="_blank"
             rel="noopener noreferrer"
             className="group relative hidden overflow-hidden rounded-full border-2 border-emerald-900 px-5 py-2 text-sm font-semibold text-emerald-900 transition-all hover:scale-105 hover:shadow-lg dark:border-emerald-600 dark:text-emerald-400 sm:block"
@@ -188,35 +199,35 @@ export default function Navbar() {
             <div className="flex flex-col gap-2">
               <a
                 href="#features"
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={(e) => handleLinkClick(e, '#features')}
                 className="rounded-lg px-4 py-3 text-sm font-medium text-zinc-700 transition-colors hover:bg-emerald-50 hover:text-emerald-900 dark:text-zinc-300 dark:hover:bg-emerald-900/20 dark:hover:text-emerald-400"
               >
                 Features
               </a>
               <a
                 href="#tech"
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={(e) => handleLinkClick(e, '#tech')}
                 className="rounded-lg px-4 py-3 text-sm font-medium text-zinc-700 transition-colors hover:bg-emerald-50 hover:text-emerald-900 dark:text-zinc-300 dark:hover:bg-emerald-900/20 dark:hover:text-emerald-400"
               >
                 Technology
               </a>
               <a
                 href="#gallery"
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={(e) => handleLinkClick(e, '#gallery')}
                 className="rounded-lg px-4 py-3 text-sm font-medium text-zinc-700 transition-colors hover:bg-emerald-50 hover:text-emerald-900 dark:text-zinc-300 dark:hover:bg-emerald-900/20 dark:hover:text-emerald-400"
               >
                 Gallery
               </a>
               <a
                 href="#faq"
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={(e) => handleLinkClick(e, '#faq')}
                 className="rounded-lg px-4 py-3 text-sm font-medium text-zinc-700 transition-colors hover:bg-emerald-50 hover:text-emerald-900 dark:text-zinc-300 dark:hover:bg-emerald-900/20 dark:hover:text-emerald-400"
               >
                 FAQ
               </a>
               <div className="mt-2 flex flex-col gap-2">
                 <a
-                  href="https://github.com"
+                  href="https://github.com/StabilityNexus/Zplit"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 rounded-lg border-2 border-emerald-900 px-4 py-3 text-sm font-semibold text-emerald-900 transition-colors hover:bg-emerald-900 hover:text-white dark:border-emerald-600 dark:text-emerald-400 dark:hover:bg-emerald-600 dark:hover:text-white"
